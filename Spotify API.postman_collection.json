@@ -1,0 +1,1513 @@
+{
+	"info": {
+		"_postman_id": "b70ef4af-e9bf-481e-9d09-d98765aa70ef",
+		"name": "Spotify API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30130105"
+	},
+	"item": [
+		{
+			"name": "Autentificare",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var numeVariabila = pm.response.json()\r",
+							"pm.collectionVariables.set(\"token_spotify\", numeVariabila.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic MjE3NWUyMWIyYzc0NGFiNjk2YTkyZjM0YjExOTM5Mzg6NmE5NGQ0YzlkOTQxNGFkNTk2NzQ5M2IyNGU0M2NiYjA=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{spotify-url}}/api/token",
+					"host": [
+						"{{spotify-url}}"
+					],
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autentificare for tracks",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var numeVariabila = pm.response.json()\r",
+							"pm.collectionVariables.set(\"token_4tracks\", numeVariabila.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic MjE3NWUyMWIyYzc0NGFiNjk2YTkyZjM0YjExOTM5Mzg6NmE5NGQ0YzlkOTQxNGFkNTk2NzQ5M2IyNGU0M2NiYjA=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "user-library-read",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{spotify-url}}/api/token",
+					"host": [
+						"{{spotify-url}}"
+					],
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autentificare for users profile",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var numeVariabila = pm.response.json()\r",
+							"pm.collectionVariables.set(\"token_4tracks\", numeVariabila.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic MjE3NWUyMWIyYzc0NGFiNjk2YTkyZjM0YjExOTM5Mzg6NmE5NGQ0YzlkOTQxNGFkNTk2NzQ5M2IyNGU0M2NiYjA=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "user-library-read",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{spotify-url}}/api/token",
+					"host": [
+						"{{spotify-url}}"
+					],
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autentificare for tracks put",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var numeVariabila = pm.response.json()\r",
+							"pm.collectionVariables.set(\"token_4tracks2\", numeVariabila.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic MjE3NWUyMWIyYzc0NGFiNjk2YTkyZjM0YjExOTM5Mzg6NmE5NGQ0YzlkOTQxNGFkNTk2NzQ5M2IyNGU0M2NiYjA=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "user-library-modify",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{spotify-url}}/api/token",
+					"host": [
+						"{{spotify-url}}"
+					],
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get artist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that the status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check that the response time is less than 300ms\", function () {\r",
+							"pm.test(\"Verify that the body contains dance pop\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"dance pop\");\r",
+							"});\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+							"});\r",
+							"pm.test(\"Verify that the artist has popularity 79\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.popularity).to.eql(79);\r",
+							"});\r",
+							"pm.test(\"Verify that the artist name is Pitbull\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.eql(\"Pitbull\");\r",
+							"});\r",
+							"pm.test(\"Check that the header has a content-type\", function () {\r",
+							"    pm.response.to.have.header(\"content-type\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var token = \"access_token\""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/artists/0TnOYISbd1XYRBk9myaseg",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"0TnOYISbd1XYRBk9myaseg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get several artists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that the status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"check that the response time is less than 300ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+							"});\r",
+							"pm.test(\"Verify that first artist name is deadmau5\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].name).to.eql(\"deadmau5\");\r",
+							"});\r",
+							"pm.test(\"Check that the second artist has popularity\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[1].popularity).to.eql(62);\r",
+							"});\r",
+							"pm.test(\"Check that the first artis has total field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].followers.total).to.eql(2811767);\r",
+							"});\r",
+							"pm.test(\"Check that the second artist is Ratatat\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[1].name).to.eql(\"Ratatat\");\r",
+							"});\r",
+							"pm.test(\"Check that the second artist has genre Indietronica\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[1].genres[0]).to.eql(\"indietronica\");\r",
+							"});\r",
+							"pm.test(\"Check that the second artist has id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[1].id).to.eql(\"57dN52uHvrHOxijzpIgu3E\");\r",
+							"});\r",
+							"pm.test(\"Check the first artist has an url\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].uri).to.eql(\"spotify:artist:2CIMQHirSU0MQqyYHq0eOx\");\r",
+							"});\r",
+							"pm.test(\"Check that the first artist has an attach url\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].images[0].url).to.eql(\"https://i.scdn.co/image/ab6761610000e5ebc5ceb05f152103b2b70d3b07\");\r",
+							"});\r",
+							"pm.test(\"Check that first artist has id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].id).to.eql(\"2CIMQHirSU0MQqyYHq0eOx\");\r",
+							"});\r",
+							"pm.test(\"Check that first artist has genre\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].genres[2]).to.eql(\"edm\");\r",
+							"});   \r",
+							"pm.test(\"Check that the first artist has images url\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].images[0].url).to.eql(\"https://i.scdn.co/image/ab6761610000e5ebc5ceb05f152103b2b70d3b07\");\r",
+							"});\r",
+							"pm.test(\"verify that first artist contains genre electro house\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].genres).to.contains(\"electro house\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/artists?ids=2CIMQHirSU0MQqyYHq0eOx%2C57dN52uHvrHOxijzpIgu3E%2C1vCWHaC5f2uS3yhpwWbIA6",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"artists"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "2CIMQHirSU0MQqyYHq0eOx%2C57dN52uHvrHOxijzpIgu3E%2C1vCWHaC5f2uS3yhpwWbIA6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Artist's Albums",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that the response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							"pm.test(\"Check that the status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check that the body contains name Pitbull\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Pitbull\");\r",
+							"});\r",
+							"pm.test(\"Verify that first artist is Pitbull\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.items[0].artists[0].name).to.eql(\"Pitbull\");\r",
+							"});\r",
+							"pm.test(\"Check that first artist has id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.items[0].id).to.eql(\"4EUf4YyNjuXypWY6W5wEDm\");\r",
+							"});\r",
+							"pm.test(\"Verify that the first item has an id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.items[0].id).to.eql(\"4EUf4YyNjuXypWY6W5wEDm\");\r",
+							"});\r",
+							"pm.test(\"Check that the first artist is_playable true value\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.items[0].is_playable).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/artists/0TnOYISbd1XYRBk9myaseg/albums?market=ES&limit=10&include_groups=album,single&offset=5",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"0TnOYISbd1XYRBk9myaseg",
+						"albums"
+					],
+					"query": [
+						{
+							"key": "market",
+							"value": "ES"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "include_groups",
+							"value": "album,single"
+						},
+						{
+							"key": "offset",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Artist's Top Tracks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that the status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Check that the album of the first artist is Planet Pit (Deluxe Version)\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks[0].album.name).to.contain(\"Planet Pit (Deluxe Version)\");\r",
+							"});\r",
+							"pm.test(\"Check that the first artists has id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks[0].album.artists[0].id).to.contain(\"0TnOYISbd1XYRBk9myaseg\");\r",
+							"});\r",
+							"pm.test(\"Check that body contains Pitbull\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var artistNames = jsonData.tracks.map(function(tracks) {\r",
+							"        return tracks.artists[0].name;\r",
+							"    });\r",
+							"    pm.expect(artistNames[0]).to.include(\"Pitbull\");\r",
+							"});\r",
+							"pm.test(\"Verify that the 'tracks' array is present and contains at least 10 element\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    pm.expect(responseData.tracks).to.exist.and.to.be.an('array').with.lengthOf.at.least(10);\r",
+							"});\r",
+							"pm.test(\"Verify that the 'artists' array is present and contains at least one element\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    pm.expect(responseData.tracks[0].artists).to.exist.and.to.be.an('array').with.lengthOf.at.least(1);\r",
+							"});\r",
+							"pm.test(\"Check that first album has release_date\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks[0].album.release_date).to.contain(\"2011-06-17\");\r",
+							"});\r",
+							"pm.test(\"Check that body contains Pitbull\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var firstArtistName = jsonData.tracks[0].artists[0].name;\r",
+							"    pm.expect(firstArtistName).to.include(\"Pitbull\");\r",
+							"});\r",
+							"pm.test(\"Check that the second album has id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks[0].artists[1].id).to.contain(\"21E3waRsmPlU7jZsS13rcj\");\r",
+							"});\r",
+							"pm.test(\"Check that the second artist has name Ne-Yo\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks[0].artists[1].name).to.eql(\"Ne-Yo\");\r",
+							"});\r",
+							"pm.test(\"Check that the third artist has name AFROJACK\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks[0].artists[2].name).to.eql(\"AFROJACK\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Claudia Leitte\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/artists/0TnOYISbd1XYRBk9myaseg/top-tracks?market=ES",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"0TnOYISbd1XYRBk9myaseg",
+						"top-tracks"
+					],
+					"query": [
+						{
+							"key": "market",
+							"value": "ES"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get an Album",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that the status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check that the response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Check that the firts album has artist name Pitbull\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].name).to.eql(\"Pitbull\");\r",
+							"});\r",
+							"pm.test(\"Check that first album has id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(\"4aawyAB9vmqN3uQ7FjRGTy\");\r",
+							"});\r",
+							"pm.test(\"Check that first album has label\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.label).to.eql(\"Mr.305/Polo Grounds Music/RCA Records\");\r",
+							"});\r",
+							"pm.test(\"Check that the second artist has name Sensato\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks.items[0].artists[1].name).to.include(\"Sensato\");\r",
+							"});\r",
+							"pm.test(\"Check that the first items has name Global Warming\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks.items[0].name).to.eql(\"Global Warming\");\r",
+							"});\r",
+							"pm.test(\"Check that the tracks limit is 50\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks.limit).to.eql(50);\r",
+							"});\r",
+							"pm.test(\"Check that we have in header content-type\", function () {\r",
+							"    pm.response.to.have.header(\"content-type\");\r",
+							"});\r",
+							"\r",
+							"var schema = {\r",
+							"    \"items\": {\r",
+							"        \"type\": \"boolean\"\r",
+							"    }\r",
+							"};\r",
+							"\r",
+							"var is_playable = [true, false];\r",
+							"\r",
+							"pm.test('Check that first album is playable true', function () {\r",
+							"    pm.expect(tv4.validate(is_playable, schema)).to.be.true;\r",
+							"   });\r",
+							"   \r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/albums/4aawyAB9vmqN3uQ7FjRGTy?market=ES",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"albums",
+						"4aawyAB9vmqN3uQ7FjRGTy"
+					],
+					"query": [
+						{
+							"key": "market",
+							"value": "ES"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Several Browse Categories",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that the status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check that the response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Check that first item has id 0JQ5DAqbMKFHOzuVTgTizF\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.categories.items[0].id).to.eql(\"0JQ5DAqbMKFHOzuVTgTizF\");\r",
+							"});\r",
+							"pm.test(\"Check that first item has name Dance/electronic\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.categories.items[0].name).to.eql(\"Dance/electronic\");\r",
+							"});\r",
+							"pm.test(\"Check that second item has name EQUAL\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.categories.items[1].name).to.eql(\"EQUAL\");\r",
+							"});\r",
+							"pm.test(\"Check that last item has name Välmående\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.categories.items[9].name).to.eql(\"Välmående\");\r",
+							"});\r",
+							"pm.test(\"Check that categories has href\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.categories.href).to.eql(\"https://api.spotify.com/v1/browse/categories?country=SE&locale=sv_se&offset=5&limit=10\");\r",
+							"});\r",
+							"pm.test(\"Check that second item has href\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.categories.items[1].href).to.eql(\"https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFPw634sFwguI\");\r",
+							"});\r",
+							"pm.test(\"Check that category has total 44\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.categories.total).to.eql(44);\r",
+							"});\r",
+							"pm.test(\"Check that Transfer-Encoding is present in header\", function () {\r",
+							"    pm.response.to.have.header(\"Transfer-Encoding\");\r",
+							"});\r",
+							"pm.test(\"Status code name is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/browse/categories?country=SE&locale=sv_SE&limit=10&offset=5",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"browse",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "SE"
+						},
+						{
+							"key": "locale",
+							"value": "sv_SE"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Available Genre Seeds",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check that response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Check that 4 genre is ambient\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.genres[4]).to.eql(\"ambient\");\r",
+							"});\r",
+							"pm.test(\"Check that body matches alt-rock\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"alt-rock\");\r",
+							"});\r",
+							"pm.test(\"Check that body matches alt-rock and anime\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"alt-rock\",\"anime\");\r",
+							"});\r",
+							"pm.test(\"Check thjat header contains Alt-Svc\", function () {\r",
+							"    pm.response.to.have.header(\"Alt-Svc\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/recommendations/available-genre-seeds",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"recommendations",
+						"available-genre-seeds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Track",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check tjat status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check that response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Check that first artist's name is Carly Rae Jepsen\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.album.artists[0].name).to.eql(\"Carly Rae Jepsen\");\r",
+							"});\r",
+							"pm.test(\"Check that first album has name Cut To The Feeling\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.album.name).to.eql(\"Cut To The Feeling\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/tracks/11dFghVXANMlKmJXsNCbNl?market=ES",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"tracks",
+						"11dFghVXANMlKmJXsNCbNl"
+					],
+					"query": [
+						{
+							"key": "market",
+							"value": "ES"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Several Tracks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check that response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Check that first artist has name Muse\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks[0].artists[0].name).to.include(\"Muse\");\r",
+							"});\r",
+							"pm.test(\"Check that first artist has id 7ouMYWpwJ422jRcDASZB7P\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks[0].id).to.include(\"7ouMYWpwJ422jRcDASZB7P\");\r",
+							"});\r",
+							"pm.test(\"Check that first album has id 0lw68yx3MhKflWFqCsGkIs\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tracks[0].album.id).to.eql(\"0lw68yx3MhKflWFqCsGkIs\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/tracks?market=ES&ids=7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"tracks"
+					],
+					"query": [
+						{
+							"key": "market",
+							"value": "ES"
+						},
+						{
+							"key": "ids",
+							"value": "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User's Saved Tracks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_4tracks}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/me/tracks?market=ES&limit=10&offset=5",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"me",
+						"tracks"
+					],
+					"query": [
+						{
+							"key": "market",
+							"value": "ES"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Tracks for Current User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_4tracks2}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": [\r\n        \"string\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{spotify1-url}}/v1/me/tracks?ids=7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"me",
+						"tracks"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Album Tracks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that the response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Check that the status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check that first artist name from the first album is Pitbull\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.items[0].artists[0].name).to.eql(\"Pitbull\");\r",
+							"});\r",
+							"pm.test(\"Check that the second artist form the first album is Usher\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.items[0].artists[1].name).to.eql(\"USHER\");\r",
+							"});\r",
+							"pm.test(\"Check that first album duration is 243160\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.items[0].duration_ms).to.eql(243160);\r",
+							"});\r",
+							"pm.test(\"Check that the second artist from the second album is Jennifer Lopez\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.items[1].artists[1].name).to.eql(\"Jennifer Lopez\");\r",
+							"});\r",
+							"pm.test(\"Check that total items are 18\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.total).to.eql(18);\r",
+							"});\r",
+							"pm.test(\"Check that limit is 10\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.limit).to.eql(10);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/albums/4aawyAB9vmqN3uQ7FjRGTy/tracks?id=4aawyAB9vmqN3uQ7FjRGTy&market=ES&limit=10&offset=5",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"albums",
+						"4aawyAB9vmqN3uQ7FjRGTy",
+						"tracks"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4aawyAB9vmqN3uQ7FjRGTy"
+						},
+						{
+							"key": "market",
+							"value": "ES"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get New Releases Albums",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check that the response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							"pm.test(\"Check that first items has album_type single\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.albums.items[0].album_type).to.eql(\"single\");\r",
+							"});\r",
+							"pm.test(\"Check that first artist name is Winona\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.albums.items[0].artists[0].name).to.eql(\"Winona Oak\");\r",
+							"});\r",
+							"pm.test(\"Check that first items has available market At and CL\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.albums.items[0].available_markets).to.contains(\"AT\",\"CL\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/browse/new-releases?country=SE&limit=10&offset=5",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"browse",
+						"new-releases"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "SE"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Browse Category",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check that response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Check that the name is Matlagning och middag\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.eql(\"Matlagning och middag\");\r",
+							"});\r",
+							"pm.test(\"Check that the id is 0JQ5DAqbMKFRY5ok2pxXJ0\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(\"0JQ5DAqbMKFRY5ok2pxXJ0\");\r",
+							"});\r",
+							"pm.test(\"Check that the icons height is 274\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.icons[0].height).to.eql(274);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/browse/categories/dinner?category_id=dinner&country=SE&locale=sv_SE",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"browse",
+						"categories",
+						"dinner"
+					],
+					"query": [
+						{
+							"key": "category_id",
+							"value": "dinner"
+						},
+						{
+							"key": "country",
+							"value": "SE"
+						},
+						{
+							"key": "locale",
+							"value": "sv_SE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Artist's Related Artists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check that the response time is less than 600ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+							"});\r",
+							"pm.test(\"Check that the status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check that first artist has genre pop rap\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].genres).to.contains(\"pop rap\");\r",
+							"});\r",
+							"pm.test(\"Check that first artist has genres miami hip hop and pop rap\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].genres).to.contains(\"miami hip hop\",\"pop rap\");\r",
+							"});\r",
+							"pm.test(\"Check that first artist has name Flo Rida\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[0].name).to.eql(\"Flo Rida\");\r",
+							"});\r",
+							"pm.test(\"Check that second artist has name LMFAO\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.artists[1].name).to.eql(\"LMFAO\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_spotify}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/artists/0TnOYISbd1XYRBk9myaseg/related-artists",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"0TnOYISbd1XYRBk9myaseg",
+						"related-artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current User's Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_4users}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spotify1-url}}/v1/me",
+					"host": [
+						"{{spotify1-url}}"
+					],
+					"path": [
+						"v1",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generare token full acces",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://accounts.spotify.com/api/token?client_id=fc4fdd07017b471b93d2fab1b3765c0e&redirect_uri=http://itfactory/callback&code=AQAH9nei3AJVEuvGCLIlvGBF8uRwadX_Y-zun3cV9P9ZU0YT5WMbm-c4x1Qzd6ubZeByR87uVW8rET3oNRx_dGNr3dg7dOF3BrMxB5SH0pgF_j89wSQ58d5Edxfdc2K5xXeo3q3BaK3LUmRAjxFoiczkSg1-wqAoUWuMLRgVd-jLawp14jA9quczhI3MkXqAZFcpjMNMpRk72OJSw-2Rkbd-H4RKi61cbzD3K3-VaYX1a112pDEgRc08YBj-Ac3X8kgvroQNJuFPkOtk74x7sMlN_3VxXPHJ23m0naTuDf19YdL5a1QGrhzfc2R9deyi-1WhuTnNYXy7TGeJU2Q8-Ql16gwdQfCuubX-A7CkSZU_wiPwOZZiGWK0i3Cxdy7qr_DxYci1PRVI4LNF8lnp6Q7xwos6b-4XMTuCOx2iKEYppYoTtDAt2_8hbCbdcuXysrlygG02UfqH42sCv9lUCJUEo2CwrkgMYTI3Xi32-sPdrIZK8cZ7hkTcFWoFsbd3-fhkAtJ-TJVmqlIMGJy8YunY-z_8f8TaYNqd82ae95fxKEloct7gPWvz6CckVd84KrFCuXMjEm3x2_Pdp_Sj82c6ey-t_J_2mE2qLz6M-cL6_r-HJo3u_oTVf0b3tPRPNN094Gc4HqmvxD96sRhBIemwHWsSKdG6g-RC2VFe0AGcNY2UD4SdM4itfD3AFwU_gDOX3DVK09vol8xICMyN&client_secret=0a73cd3795284cf5a91d07ff7ad53c59&grant_type=authorization_code",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"api",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "fc4fdd07017b471b93d2fab1b3765c0e"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://itfactory/callback"
+						},
+						{
+							"key": "code",
+							"value": "AQAH9nei3AJVEuvGCLIlvGBF8uRwadX_Y-zun3cV9P9ZU0YT5WMbm-c4x1Qzd6ubZeByR87uVW8rET3oNRx_dGNr3dg7dOF3BrMxB5SH0pgF_j89wSQ58d5Edxfdc2K5xXeo3q3BaK3LUmRAjxFoiczkSg1-wqAoUWuMLRgVd-jLawp14jA9quczhI3MkXqAZFcpjMNMpRk72OJSw-2Rkbd-H4RKi61cbzD3K3-VaYX1a112pDEgRc08YBj-Ac3X8kgvroQNJuFPkOtk74x7sMlN_3VxXPHJ23m0naTuDf19YdL5a1QGrhzfc2R9deyi-1WhuTnNYXy7TGeJU2Q8-Ql16gwdQfCuubX-A7CkSZU_wiPwOZZiGWK0i3Cxdy7qr_DxYci1PRVI4LNF8lnp6Q7xwos6b-4XMTuCOx2iKEYppYoTtDAt2_8hbCbdcuXysrlygG02UfqH42sCv9lUCJUEo2CwrkgMYTI3Xi32-sPdrIZK8cZ7hkTcFWoFsbd3-fhkAtJ-TJVmqlIMGJy8YunY-z_8f8TaYNqd82ae95fxKEloct7gPWvz6CckVd84KrFCuXMjEm3x2_Pdp_Sj82c6ey-t_J_2mE2qLz6M-cL6_r-HJo3u_oTVf0b3tPRPNN094Gc4HqmvxD96sRhBIemwHWsSKdG6g-RC2VFe0AGcNY2UD4SdM4itfD3AFwU_gDOX3DVK09vol8xICMyN"
+						},
+						{
+							"key": "client_secret",
+							"value": "0a73cd3795284cf5a91d07ff7ad53c59"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "spotify-url",
+			"value": "https://accounts.spotify.com",
+			"type": "string"
+		},
+		{
+			"key": "spotify1-url",
+			"value": "https://api.spotify.com",
+			"type": "string"
+		},
+		{
+			"key": "token_spotify",
+			"value": ""
+		},
+		{
+			"key": "token_4tracks",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token_4tracks2",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token_4users",
+			"value": ""
+		}
+	]
+}
