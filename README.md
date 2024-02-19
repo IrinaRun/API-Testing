@@ -12,7 +12,6 @@ Collection link: https://github.com/IrinaRun/API-Testing/blob/main/Spotify%20API
 **Post authentication**
 HTTP method for request: POST
 Request description: Request for authentication, for creating a token
-Test types / techniques used: Inserati tipurile si tehnicile de testare folosite pentru acest request
 Response status code: 200
 Below you can find a picture of the API request from Postman:
 ![image](https://github.com/IrinaRun/API-Testing/assets/153914775/43cc11d5-0661-42ff-8cf7-f6d67d1ffe99)
@@ -24,7 +23,6 @@ JavaScript Tests:
 **Post authentication for tracks**
 HTTP method for request: POST
 Request description: Request for authentication, for creating a token, it is needed for tracks
-Test types / techniques used: Inserati tipurile si tehnicile de testare folosite pentru acest request
 Response status code: 200
 Below you can find a picture of the API request from Postman:
 ![image](https://github.com/IrinaRun/API-Testing/assets/153914775/8e513425-d704-4f51-8cef-1b4a1b8d181d)
@@ -36,7 +34,6 @@ JavaScript Tests:
 **GET Artist**
 HTTP method for request: GET
 Request description: Request to get all artists
-Test types / techniques used: Inserati tipurile si tehnicile de testare folosite pentru acest request
 Response status code: 200
 Below you can find a picture of the API request from Postman:
 ![image](https://github.com/IrinaRun/API-Testing/assets/153914775/04e40aca-24d3-45d5-84d1-6d780028aec5)
