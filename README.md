@@ -33,7 +33,7 @@ JavaScript Tests:
 
 **GET Artist**
 HTTP method for request: GET
-Request description: Request to get all artists
+Request description: Request to get an artist
 Response status code: 200
 Below you can find a picture of the API request from Postman:
 ![image](https://github.com/IrinaRun/API-Testing/assets/153914775/04e40aca-24d3-45d5-84d1-6d780028aec5)
@@ -43,6 +43,23 @@ JavaScript Tests:
 ![image](https://github.com/IrinaRun/API-Testing/assets/153914775/8ee8aaa5-eba0-4063-9e3e-0c04fdc1ed7d)
 
 ![image](https://github.com/IrinaRun/API-Testing/assets/153914775/b2f7822a-134f-47cf-8f52-ae443553c388)
+
+**GET Several Artists**
+HTTP method for request: GET
+Request description: Request to get several artists
+Response status code: 200
+Below you can find a picture of the API request from Postman:
+![image](https://github.com/IrinaRun/API-Testing/assets/153914775/553f9747-3687-41f8-8011-e142e94d34d4)
+![image](https://github.com/IrinaRun/API-Testing/assets/153914775/47dd1d42-b24f-424a-bcf7-065203d5265e)
+![image](https://github.com/IrinaRun/API-Testing/assets/153914775/3d6a19a1-98da-4b4d-9220-d438b6a2780c)
+
+
+
+
+JavaScript Tests:
+![image](https://github.com/IrinaRun/API-Testing/assets/153914775/a555e6e6-157c-446c-8072-528fac9ba726)
+![image](https://github.com/IrinaRun/API-Testing/assets/153914775/0d4bfd3d-ad93-442c-b537-d470bf7d173a)
+
 
 
 
