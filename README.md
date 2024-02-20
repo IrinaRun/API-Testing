@@ -1,3 +1,4 @@
+
 # API-Testing project for Spotify
 
 The scope of this project is to use all API knowledge gained throught the Software Testing course and apply them in practice, using a live application.
@@ -7,6 +8,9 @@ Application under test: www.spotify.com
 Tools used: Postman, Newman
 
 Collection link: https://github.com/IrinaRun/API-Testing/blob/main/Spotify%20API.postman_collection.json
+
+I made several functional tests on manual testing module to verify that all the request run ok. All the tests made were passed.
+
 
 # Tests performed
 **Post authentication**
